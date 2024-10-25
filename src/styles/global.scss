@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+body {
+    scroll-behavior: smooth;
+    touch-action: manipulation;
+}
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+button {
+    border: none;
+    cursor: pointer;
+    background: none;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+}
+input {
+    border: none;
+    outline: none;
+    background: none;
+    appearance: none;
+}
+::-webkit-slider-thumb {
+    appearance: none;
+}

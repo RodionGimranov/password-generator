@@ -1,0 +1,47 @@
+@media (max-width: 550px) {
+    .title_container {
+        gap: 0px;
+    }
+
+    .project_title {
+        font-size: 38px;
+    }
+
+    .generator_content {
+        width: 100%;
+        margin-top: 10vh;
+    }
+
+    .option_title,
+    .password_length {
+        font-size: 20px;
+    }
+
+    .include_option_btn {
+        width: 46px;
+        height: 28px;
+    }
+
+    .toogleSwitch {
+        width: 22px;
+        height: 22px;
+    }
+
+    .include_option_btn.__active .toogleSwitch {
+        transform: translate3d(19px, 0px, 0px);
+    }
+
+    .slider_length {
+        height: 6px;
+
+        &::-webkit-slider-thumb {
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+    .generate_password_btn {
+        font-size: 22px;
+        padding: 10px;
+    }
+}
