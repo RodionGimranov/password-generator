@@ -16,10 +16,10 @@
 <script setup>
 import { ref, onMounted } from "vue";
 
-import { useI18n } from "vue-i18n";
-
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
+
+import { useI18n } from "vue-i18n";
 
 const { locale } = useI18n();
 
@@ -84,11 +84,11 @@ header {
     color: $primary_black;
 
     &:hover {
-        box-shadow: 0px 0px 0px 1px $second_white inset;
+        opacity: 0.8;
     }
 
     &:active {
-        transform: scale(0.98);
+        transform: scale(0.96);
     }
 }
 

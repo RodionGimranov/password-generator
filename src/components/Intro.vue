@@ -14,7 +14,7 @@
             <div class="about_password_btn">
                 {{ $t("message.aboutPasswordBtn") }}
                 <span class="arrow_container">
-                    <img src="../assets/images/svg/arrow-icon.svg" alt="Arrow icon" />
+                    <img :src="arrow_icon" alt="Arrow icon" />
                 </span>
             </div>
         </div>
@@ -26,6 +26,8 @@ import { onMounted } from "vue";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
+
+import arrow_icon from "../assets/images/svg/arrow-icon.svg";
 
 onMounted(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -75,8 +77,8 @@ onMounted(() => {
 }
 
 .project_subtitle {
-    font-size: 26px;
-    font-weight: 500;
+    font-size: 24px;
+    font-weight: 400;
     color: $primary_gray;
     text-align: center;
 }
