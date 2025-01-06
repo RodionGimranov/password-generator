@@ -37,11 +37,11 @@
 <script setup>
 import { ref, computed } from "vue";
 import { Vue3Lottie } from "vue3-lottie";
+
 import copyIcon from "../../animations/copy-icon.json";
 
 const lottieAnim = ref(null);
 
-// Новые переменные состояния для управления отображением
 const showCopyMessage = ref(false);
 const showPasswordText = ref(true);
 const passwordMsg = ref("message.copy");
@@ -64,6 +64,10 @@ const stopAnimation = () => {
 const passwordLength = computed(() => props.generatedPassword.length);
 
 const passwordCopy = () => {
+    if (passwordLength.value === 0) {
+        return;
+    }
+
     const el = document.createElement("textarea");
     el.value = props.generatedPassword;
     document.body.appendChild(el);
