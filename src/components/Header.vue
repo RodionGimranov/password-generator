@@ -14,11 +14,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue";
-
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/all";
-
+import { ref } from "vue";
 import { useI18n } from "vue-i18n";
 
 const { locale } = useI18n();
@@ -30,22 +26,6 @@ const changeLanguage = () => {
     locale.value = newLocale;
     currentLocale.value = newLocale;
 };
-
-onMounted(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
-    gsap.to(".change_lang_btn, .globe_icon", {
-        color: "#fff",
-        fill: "#fff",
-        scrollTrigger: {
-            trigger: "body",
-            start: "top top%",
-            end: "bottom 1%",
-            scrub: true,
-            pinSpacing: true,
-        },
-    });
-});
 </script>
 
 <style lang="scss">
@@ -77,11 +57,11 @@ header {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 5px;
+    gap: 4px;
 
     font-size: 20px;
-    font-weight: 500;
-    color: $primary_black;
+    font-weight: 400;
+    color: $primary_white;
 
     &:hover {
         opacity: 0.8;
@@ -96,6 +76,6 @@ header {
     width: 24px;
     height: 24px;
     transition: 0.2s;
-    fill: $primary_black;
+    fill: $primary_white;
 }
 </style>
